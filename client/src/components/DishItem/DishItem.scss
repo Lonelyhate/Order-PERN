@@ -1,0 +1,26 @@
+.dish-item{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 10px 0;
+    margin-bottom: 10px;
+    &:not(:first-child){
+        border-top: 1px solid #eeeeee;
+    }
+    &__name{
+        justify-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg{
+            fill: #008CBA;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+    }
+    &__delete{
+        svg{
+            cursor: pointer;
+            fill: #f44336;
+        }
+    }
+}

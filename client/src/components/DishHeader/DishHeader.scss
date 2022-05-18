@@ -1,0 +1,39 @@
+.dish-header{
+    display: flex;
+    justify-content: space-between;
+    &__list{
+        display: flex;
+    }
+    &__item{
+        margin-right: 10px;
+    }
+    &__btn{
+        background-color: rgb(238, 238, 238);
+        color: #000;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 16px;
+        padding: 10px 25px;
+        border-radius: 20px;
+        &.active{
+            background-color: #000;
+            color: #fff;
+        }
+    }
+    &__add{
+        border: none;
+        display: flex;
+        align-items: center;
+        background-color: #4CAF50;
+        color: #fff;
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 20px;
+        svg{
+            margin-right: 5px;
+        }
+    }
+}

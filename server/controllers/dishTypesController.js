@@ -14,7 +14,7 @@ class DishTypesController { //Класс по работе с данными Dis
     async get(req, res) { //Метод класса по получение типов блюд
         try {
             const dishTypesChek = await DishTypes.findAll() //Проверка на статические данные
-            if(!dishTypesChek) { //Если нет типов блюд, то создаются статические данные
+            if(dishTypesChek.length === 0) { //Если нет типов блюд, то создаются статические данные
                 await DishTypes.create({name: 'Напиток'})
                 await DishTypes.create({name: 'Салат'})
                 await DishTypes.create({name: 'Десерт'})

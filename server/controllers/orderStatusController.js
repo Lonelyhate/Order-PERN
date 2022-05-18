@@ -14,7 +14,7 @@ class StatusOrderController { //Класс по работе со статуса
     async getAll(req, res) { //Метод класса по получению статусов заказа
         try {
             const statusOrdersChek = await StatusOrder.findAll() //Проверка есть ли в бд статические данные
-            if(!statusOrdersChek) { //Если статики не найдено, то создаем
+            if(statusOrdersChek.length === 0) { //Если статики не найдено, то создаем
                 await StatusOrder.create({name: 'Выполняется'})
                 await StatusOrder.create({name: 'Выполнен'})
                 await StatusOrder.create({name: 'Отменен'})
